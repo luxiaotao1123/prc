@@ -19,7 +19,8 @@ layui.use(['table','laydate', 'form'], function(){
             {type: 'checkbox', fixed: 'left'}
             ,{field: 'id', title: 'ID', sort: true,align: 'center', fixed: 'left', width: 80}
             ,{field: 'name', align: 'center',title: '规则名称'}
-            ,{field: 'flag', align: 'center',title: '标识'}
+            ,{field: 'bean', align: 'center',title: 'BEAN'}
+            ,{field: 'value', align: 'center',title: '校验值'}
             ,{field: 'sort', align: 'center',title: '排序'}
             ,{field: 'memo', align: 'center',title: '注释'}
             ,{field: 'createTime$', align: 'center',title: '添加时间'}
@@ -198,7 +199,8 @@ layui.use(['table','laydate', 'form'], function(){
         var data = {
             id: $('#id').val(),
             name: $('#name').val(),
-            flag: $('#flag').val(),
+            bean: $('#bean').val(),
+            value: $('#value').val(),
             sort: $('#sort').val(),
             memo: $('#memo').val(),
             createTime: top.strToDate($('#createTime\\$').val()),

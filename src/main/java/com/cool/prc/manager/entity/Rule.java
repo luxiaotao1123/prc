@@ -28,9 +28,14 @@ public class Rule implements Serializable {
     private String name;
 
     /**
-     * 标识
+     * BEAN
      */
-    private String flag;
+    private String bean;
+
+    /**
+     * 校验值
+     */
+    private String value;
 
     /**
      * 排序
@@ -61,9 +66,10 @@ public class Rule implements Serializable {
 
     public Rule() {}
 
-    public Rule(String name,String flag,Integer sort,String memo,Date createTime,Date updateTime,Short status) {
+    public Rule(String name,String bean,String value,Integer sort,String memo,Date createTime,Date updateTime,Short status) {
         this.name = name;
-        this.flag = flag;
+        this.bean = bean;
+        this.value = value;
         this.sort = sort;
         this.memo = memo;
         this.createTime = createTime;
@@ -73,7 +79,8 @@ public class Rule implements Serializable {
 
 //    Rule rule = new Rule(
 //            null,    // 规则名称[非空]
-//            null,    // 标识
+//            null,    // BEAN[非空]
+//            null,    // 校验值
 //            null,    // 排序[非空]
 //            null,    // 注释
 //            null,    // 添加时间[非空]
@@ -97,12 +104,20 @@ public class Rule implements Serializable {
         this.name = name;
     }
 
-    public String getFlag() {
-        return flag;
+    public String getBean() {
+        return bean;
     }
 
-    public void setFlag(String flag) {
-        this.flag = flag;
+    public void setBean(String bean) {
+        this.bean = bean;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public Integer getSort() {
