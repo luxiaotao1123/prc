@@ -12,7 +12,7 @@ public class CodeBuilder {
         generator.url="localhost:3306/prc";
         generator.username="root";
         generator.password="xltys1995";
-        generator.table="man_rule";
+        generator.table="man_rule_log";
         generator.packagePath="com.cool.prc.manager";
         generator.build();
     }
